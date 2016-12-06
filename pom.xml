@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+		http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>net.imagej</groupId>
+		<artifactId>pom-imagej</artifactId>
+		<version>16.4.1</version>
+		<relativePath />
+</parent>
+
+	<groupId>sc.fiji</groupId>
+	<artifactId>Multi_Clock_Scan</artifactId>
+	<version>1.0.1</version>
+
+	<name>plugins/Multi_Clock_Scan.jar</name>
+	<description>A Maven project implementing an ImageJ  Multi_Clock_Scan plugin</description>
+
+	<developers>
+		<developer>
+			<id>petkau</id>
+			<name>Eugen Petkau</name>
+			<email>eugen.petkau@gmx.de</email>
+			<organization>developer Dortmund</organization>
+			<roles>
+				<role>architect</role>
+				<role>developer</role>
+			</roles>
+			<timezone>+1</timezone>
+		</developer>
+	</developers>
+
+
+
+	<properties>
+		<main-class>Multi_Clock_Scan</main-class>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>net.imagej</groupId>
+			<artifactId>ij</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>${main-class}</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
